@@ -1,0 +1,459 @@
+관광통역안내사 전문 교육 사이트 HTML 코드
+
+요청하신 내용을 바탕으로, 글로벌한 감각과 한국의 아름다움을 동시에 보여주는 관광통역 전문 교육 사이트의 메인 페이지를 HTML 코드로 구현했습니다.
+
+주요 특징:
+
+타겟 맞춤 콘텐츠: '세계를 무대로 한국을 알리는 전문가'라는 컨셉으로 외국어와 한국사에 관심 있는 타겟층의 흥미를 유발합니다.
+
+글로벌 & 한국적 분위기: 모던하고 깔끔한 디자인에 한국적인 미를 담은 고품질 실사 이미지를 사용하여 요청하신 분위기를 연출했습니다.
+
+실제 사이트 콘텐츠 참고: 관광통역안내사 학원의 실제 커리큘럼과 합격 수기 구성을 참고하여 현실감 있는 콘텐츠를 구성했습니다.
+
+반응형 디자인: PC, 태블릿, 모바일 등 다양한 기기에서 최적화된 화면을 볼 수 있도록 기본적인 반응형 웹 디자인을 적용했습니다.
+
+웹폰트 사용: 가독성을 높이고 세련된 느낌을 주기 위해 구글 웹폰트(Noto Sans KR)를 사용했습니다.
+
+결과물 미리보기
+
+이 코드를 복사하여 index.html 파일로 저장한 후 웹 브라우저에서 열면 아래와 같은 구조의 웹사이트를 확인할 수 있습니다.
+
+전체 HTML 코드
+
+아래 코드를 전체 복사하여 tour_guide_korea.html과 같은 이름의 파일로 저장한 후, 웹 브라우저에서 열어보세요.
+
+code
+Html
+play_circle
+download
+content_copy
+expand_less
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Guide Academy | 세계를 무대로 한국을 알리는 전문가</title>
+    <style>
+        /* Google Fonts Import */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap');
+
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+        .section-title span {
+            color: #0056b3;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #004a99;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #0056b3;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px; /* to offset header */
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #0056b3;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #003d82;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        #about {
+            background-color: #f9f9f9;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #004a99;
+        }
+
+        /* Program Section */
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.12);
+        }
+        .card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-content {
+            padding: 25px;
+        }
+        .card-content h4 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #004a99;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #eef7ff;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .testimonial-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .testimonial-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #0056b3;
+        }
+        .testimonial-item p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .testimonial-item h5 {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .testimonial-item span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* CTA Section */
+        #contact {
+            background: linear-gradient(to right, #004a99, #007bff);
+            color: white;
+            text-align: center;
+        }
+        #contact .section-title {
+            color: white;
+        }
+        #contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        .cta-button-light {
+            background-color: white;
+            color: #0056b3;
+        }
+        .cta-button-light:hover {
+            background-color: #f0f0f0;
+            color: #003d82;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* Simple hiding for demo, real site needs hamburger menu */
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container navbar">
+            <a href="#" class="logo">K-Guide Academy</a>
+            <ul class="nav-menu">
+                <li><a href="#about">아카데미 소개</a></li>
+                <li><a href="#program">교육 과정</a></li>
+                <li><a href="#testimonials">합격 후기</a></li>
+                <li><a href="#contact">상담 신청</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>세계를 무대로, 한국의 문화를 전합니다</h1>
+                <p>K-Guide Academy와 함께 대한민국 최고의 관광통역안내사로 성장하세요.</p>
+                <a href="#contact" class="cta-button">지금 바로 상담 신청하기</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title"><span>관광통역안내사,</span><br> 문화를 잇는 외교관입니다</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1593179995429-1a0c839f15a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" alt="관광 가이드가 경복궁에서 외국인에게 설명하는 모습">
+                    </div>
+                    <div class="about-text">
+                        <h3>K-Guide Academy는 단순한 지식 전달을 넘어, <br>한국의 역사와 문화를 깊이 이해하고 자부심을 가지고 전달하는 <br>진정한 '민간 외교관'을 양성합니다.</h3>
+                        <p>관광통역안내사는 외국인 관광객에게 우리 문화유산과 관광자원을 해설하고 여행 편의를 제공하는 전문 직업입니다. 외국어 능력은 물론, 한국의 역사, 문화, 관광 상식에 대한 해박한 지식이 필수적입니다. 저희 K-Guide Academy는 다년간의 노하우를 지닌 최고의 강사진과 체계적인 커리큘럼으로 여러분의 꿈을 현실로 만들어 드립니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program Section -->
+        <section id="program">
+            <div class="container">
+                <h2 class="section-title">최고의 합격률을 자랑하는 <span>전문 교육 과정</span></h2>
+                <div class="program-cards">
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1628795500854-3e9112674251?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="card-content">
+                            <h4>관광국사 (필수)</h4>
+                            <p>방대한 한국사, 시험에 나오는 핵심만 짚어주는 명쾌한 강의! 시대별 흐름과 문화유산 중심의 전략적 학습으로 고득점을 보장합니다.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1599399432692-e4e4a781033a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80')"></div>
+                        <div class="card-content">
+                            <h4>관광자원해설 (필수)</h4>
+                            <p>유네스코 세계유산부터 K-Culture 명소까지! 생생한 현장감과 스토리텔링 기법을 더한 해설로 단순 암기를 넘어선 깊이 있는 이해를 돕습니다.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1506784983877-45594efa4c85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="card-content">
+                            <h4>관광법규 & 관광학개론</h4>
+                            <p>출입국, 관광진흥법 등 복잡한 법규와 이론을 실제 사례 중심으로 쉽게 풀어내어 단기간에 핵심 개념을 완성합니다.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="card-content">
+                            <h4>외국어 실전 면접</h4>
+                            <p>원어민 강사와 함께하는 1:1 모의 면접! 돌발 질문, 태도, 발음까지 완벽하게 교정하여 어떤 면접관 앞에서도 자신감을 심어줍니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">꿈을 이룬 선배들의 <span>생생한 합격 후기</span></h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80" alt="합격생 김민지 님">
+                        <p>"비전공자라 막막했는데, 기초부터 탄탄하게 잡아주는 커리큘럼 덕분에 자신감을 얻고 단번에 합격할 수 있었습니다."</p>
+                        <h5>김민지 님 (20대, 대학생)</h5>
+                        <span>영어 관광통역안내사</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="합격생 이현우 님">
+                        <p>"직장과 병행하며 준비하는 것이 쉽지 않았지만, 현장 경험이 풍부한 강사님들의 실전 팁이 면접에서 큰 도움이 되었습니다."</p>
+                        <h5>이현우 님 (40대, 직장인)</h5>
+                        <span>일본어 관광통역안내사</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80" alt="합격생 박서연 님">
+                        <p>"늦은 나이에 새로운 도전을 하는 것이 두려웠지만, 스터디 그룹 지원과 1:1 멘토링 덕분에 포기하지 않고 꿈을 이뤘습니다."</p>
+                        <h5>박서연 님 (50대, 주부)</h5>
+                        <span>중국어 관광통역안내사</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">이제, 당신이 주인공이 될 차례입니다.</h2>
+                <p>망설이지 마세요. K-Guide Academy의 문은 언제나 열려있습니다. 지금 바로 1:1 맞춤 상담을 통해 합격 전략을 확인해보세요!</p>
+                <a href="#" class="cta-button cta-button-light">1:1 맞춤 상담 신청하기</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">K-Guide Academy</div>
+            <p>&copy; 2023 K-Guide Academy. All Rights Reserved.</p>
+            <p>서울특별시 종로구 관광로 123, K-Guide 빌딩 5층</p>
+        </div>
+    </footer>
+
+</body>
+</html>
